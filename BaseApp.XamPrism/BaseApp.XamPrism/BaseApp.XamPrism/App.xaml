@@ -5,7 +5,12 @@
              x:Class="BaseApp.XamPrism.App">
   <Application.Resources>
 
-    <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <!-- Thiết lập màu chủ đạo -->
+            <Color x:Key="BaseColor">#e3165b</Color>
+            <Color x:Key="BaseBackgroundColor">#dee8fc</Color>
+        </ResourceDictionary>
+        <!-- Application resource dictionary -->
 
   </Application.Resources>
 </prism:PrismApplication>

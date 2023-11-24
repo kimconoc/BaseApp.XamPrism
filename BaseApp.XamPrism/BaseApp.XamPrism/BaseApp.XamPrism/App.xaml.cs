@@ -29,7 +29,7 @@ namespace BaseApp.XamPrism
             containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
             containerRegistry.RegisterForNavigation<NavigationPage>();
 
-            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
+            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>("LoginPage");
 
             //Đăng ký interface triển khai DI 
             containerRegistry.Register<IProvider, Provider>();
