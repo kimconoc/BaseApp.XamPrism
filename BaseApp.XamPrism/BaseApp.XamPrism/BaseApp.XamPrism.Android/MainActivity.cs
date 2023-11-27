@@ -1,6 +1,9 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using BaseApp.XamPrism.Droid.DependencyServices;
+using BaseApp.XamPrism.Helpers.DisplayMessage.Interfaces;
+using Plugin.CurrentActivity;
 using Prism;
 using Prism.Ioc;
 
@@ -13,9 +16,13 @@ namespace BaseApp.XamPrism.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            //Custom
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            //
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App(new AndroidInitializer()));
+            
+            
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
@@ -31,6 +38,7 @@ namespace BaseApp.XamPrism.Droid
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Register any platform specific implementations
+            containerRegistry.RegisterInstance<IDisplayMessage>(new DisplayMessageService());
         }
     }
 }

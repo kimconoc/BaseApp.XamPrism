@@ -53,7 +53,8 @@
                                 Margin="0,15,0,0"
                                 BackgroundColor="{StaticResource colorPrimary}"
                                 TextColor="{StaticResource textOnColorPrimary}"
-                                CornerRadius="5" />
+                                CornerRadius="5"
+                                Command="{Binding LoginCommand}" />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>

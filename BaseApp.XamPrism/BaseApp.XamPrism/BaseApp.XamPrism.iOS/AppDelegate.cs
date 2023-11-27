@@ -1,4 +1,6 @@
-﻿using Foundation;
+﻿using BaseApp.XamPrism.Helpers.DisplayMessage.Interfaces;
+using BaseApp.XamPrism.iOS.DependencyServices;
+using Foundation;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -33,6 +35,7 @@ namespace BaseApp.XamPrism.iOS
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Register any platform specific implementations
+            containerRegistry.RegisterInstance<IDisplayMessage>(new DisplayMessageService());
         }
     }
 }
