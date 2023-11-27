@@ -3,9 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
-             BackgroundColor="{StaticResource launcher_background}"
+             BackgroundColor="{StaticResource attention_launcher_background}"
              NavigationPage.HasNavigationBar="True"
              Title="{Binding Title}"
              x:Class="BaseApp.XamPrism.Views.LoginPage">
-  
+    <StackLayout Margin="10,50,10,10">
+        <!-- Box Form Account -->
+        <Frame CornerRadius="10"
+               BackgroundColor="{StaticResource launcher_background}">
+            <StackLayout>
+                <!-- Box Login Form -->
+                <StackLayout Padding="-5">
+                    <!-- Header -->
+                    <Label Text="Đăng nhập"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start"
+                           TextColor="{StaticResource textColorPrimary}"
+                           VerticalOptions="CenterAndExpand" />
+
+                    <!-- Box Login Form Account -->
+                    <StackLayout x:Name="boxLogin"
+                                 Padding="0">
+                        <Entry Placeholder="Tài khoản"
+                               Text="{Binding LoginName}" />
+                        <Entry Placeholder="Mật khẩu"
+                               Text="{Binding Password}"
+                               IsPassword="True" />
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="checkboxIsSaveCookies" />
+                            <Label Text="Lưu mật khẩu"
+                                   VerticalOptions="Center" />
+                        </StackLayout>
+                        <!--<Label x:Name="alertLogin"
+                               TextColor="{StaticResource textColorError}" 
+                               HorizontalOptions="Center"/>-->
+                        <Button Text="Đăng nhập"
+                                Margin="10,0,0,0"
+                                BackgroundColor="{StaticResource colorPrimary}"
+                                TextColor="{StaticResource textOnColorPrimary}"
+                                CornerRadius="5" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
 </ContentPage>

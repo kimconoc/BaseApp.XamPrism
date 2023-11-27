@@ -9,7 +9,7 @@ namespace BaseApp.XamPrism.ViewModels
     {
         public LoginPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = "Đăng nhập";
+            Title = "Tính Nhanh 24/7";
         }
     }
 }

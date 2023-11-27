@@ -8,13 +8,17 @@
         <ResourceDictionary>
             <!-- Thiết lập màu chủ đạo -->
             <Color x:Key="colorPrimary">#e3165b</Color>
-            <Color x:Key="launcher_background">#dee8fc</Color>
+            <Color x:Key="attention_launcher_background">#dee8fc</Color>
+            <Color x:Key="launcher_background">#FFFFFF</Color>
+            <Color x:Key="textColorPrimary">#000000</Color>
+            <Color x:Key="textOnColorPrimary">#FFFFFF</Color>
+            <Color x:Key="textColorError">red</Color>
             <!-- Thiết lập màu mặc định cho vùng NavigationPage và text color-->
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor"
                         Value="{StaticResource colorPrimary}" />
                 <Setter Property="BarTextColor"
-                        Value="White" />
+                        Value="{StaticResource textOnColorPrimary}" />
             </Style>
         </ResourceDictionary>
         <!-- Application resource dictionary -->
