@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              prism:ViewModelLocator.AutowireViewModel="True"
              BackgroundColor="{StaticResource attention_launcher_background}"
              NavigationPage.HasNavigationBar="True"
@@ -24,22 +26,31 @@
 
                     <!-- Box Login Form Account -->
                     <StackLayout x:Name="boxLogin"
-                                 Padding="0">
-                        <Entry Placeholder="Tài khoản"
-                               Text="{Binding LoginName}" />
-                        <Entry Placeholder="Mật khẩu"
-                               Text="{Binding Password}"
-                               IsPassword="True" />
+                                 Padding="0"
+                                 Spacing="-10">
+                        <inputLayout:SfTextInputLayout Hint="Tài khoản"
+                                                       ContainerType="Outlined"
+                                                       FocusedColor="{StaticResource colorPrimary}">
+                            <Entry Text="{Binding LoginName}" />
+                        </inputLayout:SfTextInputLayout>
+                        <inputLayout:SfTextInputLayout EnablePasswordVisibilityToggle="true"
+                                                       Hint="Mật khẩu"
+                                                       ContainerType="Outlined"
+                                                       FocusedColor="{StaticResource colorPrimary}">
+                            <Entry Text="{Binding Password}"
+                                   IsPassword="True" />
+                        </inputLayout:SfTextInputLayout>
                         <StackLayout Orientation="Horizontal">
-                            <CheckBox x:Name="checkboxIsSaveCookies" />
-                            <Label Text="Lưu mật khẩu"
-                                   VerticalOptions="Center" />
+                            <syncfusion:SfCheckBox x:Name="checkboxIsSaveCookies"
+                                                   IsChecked="False"
+                                                   Text="Lưu mật khẩu"
+                                                   CheckedColor="{StaticResource colorPrimary}"/>
                         </StackLayout>
                         <!--<Label x:Name="alertLogin"
                                TextColor="{StaticResource textColorError}" 
                                HorizontalOptions="Center"/>-->
                         <Button Text="Đăng nhập"
-                                Margin="10,0,0,0"
+                                Margin="0,15,0,0"
                                 BackgroundColor="{StaticResource colorPrimary}"
                                 TextColor="{StaticResource textOnColorPrimary}"
                                 CornerRadius="5" />

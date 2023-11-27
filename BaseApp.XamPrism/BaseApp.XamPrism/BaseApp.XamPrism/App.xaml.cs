@@ -20,6 +20,8 @@ namespace BaseApp.XamPrism
         protected override async void OnInitialized()
         {
             InitializeComponent();
+            //Đăng kí sử dụng Syncfusion
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDY1MDY5QDMxMzkyZTMyMmUzMGRhbHY5MHVhQVhUeEZBR2E5dTVWSDdtVFpXaG1jT0xiTzNLQ2VUQTBBMEk9");
 
             await NavigationService.NavigateAsync("NavigationPage/LoginPage");
         }
