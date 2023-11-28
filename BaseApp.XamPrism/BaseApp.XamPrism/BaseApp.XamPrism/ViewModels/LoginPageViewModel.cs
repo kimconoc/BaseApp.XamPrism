@@ -1,9 +1,14 @@
-﻿using Prism.Commands;
+﻿using BaseApp.XamPrism.DependencyServices;
+using BaseApp.XamPrism.Helpers;
+using BaseApp.XamPrism.Resources;
+using Prism.Commands;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace BaseApp.XamPrism.ViewModels
 {
@@ -22,8 +27,11 @@ namespace BaseApp.XamPrism.ViewModels
         {
             SafeExecute(async () =>
             {
-                DisplayMessage.ShowToast("Xin chào!");
-                return;
+                using (new UsageHUDService(CommonResource.Common_Message_Processing))
+                {
+                    DisplayMessage.ShowToast("Xin chào!");
+                    return;
+                }
             });
         }
 

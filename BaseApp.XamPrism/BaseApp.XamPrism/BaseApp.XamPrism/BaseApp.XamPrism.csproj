@@ -14,9 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Constant\" />
     <Folder Include="Enum\" />
     <Folder Include="Extentions\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using BaseApp.XamPrism.ServiceProvider;
+﻿using BaseApp.XamPrism.Constant;
+using BaseApp.XamPrism.ServiceProvider;
 using BaseApp.XamPrism.ServiceProvider.Interface;
 using BaseApp.XamPrism.ViewModels;
 using BaseApp.XamPrism.Views;
@@ -17,11 +18,13 @@ namespace BaseApp.XamPrism
         {
         }
 
+        public static string CurrentLanguage = Settings.CurrentLanguage;
+
         protected override async void OnInitialized()
         {
             InitializeComponent();
             //Đăng kí sử dụng Syncfusion
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDY1MDY5QDMxMzkyZTMyMmUzMGRhbHY5MHVhQVhUeEZBR2E5dTVWSDdtVFpXaG1jT0xiTzNLQ2VUQTBBMEk9");
+            //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDY1MDY5QDMxMzkyZTMyMmUzMGRhbHY5MHVhQVhUeEZBR2E5dTVWSDdtVFpXaG1jT0xiTzNLQ2VUQTBBMEk9");
 
             await NavigationService.NavigateAsync("NavigationPage/LoginPage");
         }

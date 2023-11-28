@@ -1,4 +1,4 @@
-﻿using BaseApp.XamPrism.DependencyServices.DisplayMessageService.Interfaces;
+﻿using BaseApp.XamPrism.DependencyServices;
 using BaseApp.XamPrism.iOS.DependencyServices;
 using Foundation;
 using Prism;
@@ -36,6 +36,7 @@ namespace BaseApp.XamPrism.iOS
         {
             // Register any platform specific implementations
             containerRegistry.RegisterInstance<IDisplayMessage>(new DisplayMessageService());
+            containerRegistry.RegisterInstance<IHUDProvider>(new HUDService());
         }
     }
 }

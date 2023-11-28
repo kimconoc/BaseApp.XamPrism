@@ -1,6 +1,6 @@
 ﻿using Android.App;
 using Android.Widget;
-using BaseApp.XamPrism.DependencyServices.DisplayMessageService.Interfaces;
+using BaseApp.XamPrism.DependencyServices;
 using BaseApp.XamPrism.Droid.DependencyServices;
 using Com.JeevanDeshmukh.GlideToastLib;
 using Plugin.CurrentActivity;

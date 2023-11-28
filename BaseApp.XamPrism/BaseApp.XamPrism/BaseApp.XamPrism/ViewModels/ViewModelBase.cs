@@ -1,4 +1,4 @@
-﻿using BaseApp.XamPrism.DependencyServices.DisplayMessageService.Interfaces;
+﻿using BaseApp.XamPrism.DependencyServices;
 using Prism;
 using Prism.Commands;
 using Prism.Ioc;
@@ -6,6 +6,7 @@ using Prism.Mvvm;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,7 +56,7 @@ namespace BaseApp.XamPrism.ViewModels
             }
             catch (Exception ex)
             {
-                
+                Debug.WriteLine($"HandleResponse-error:{ex.Message}");
             }
             finally
             {

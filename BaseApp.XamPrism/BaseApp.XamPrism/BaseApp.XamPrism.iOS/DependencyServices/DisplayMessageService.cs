@@ -1,4 +1,4 @@
-﻿using BaseApp.XamPrism.DependencyServices.DisplayMessageService.Interfaces;
+﻿using BaseApp.XamPrism.DependencyServices;
 using BaseApp.XamPrism.iOS.DependencyServices;
 using GlobalToast;
 using GlobalToast.Animation;
@@ -9,11 +9,11 @@ using Xamarin.Forms;
 
 namespace BaseApp.XamPrism.iOS.DependencyServices
 {
+    // using Toast.IOS
     public class DisplayMessageService : IDisplayMessage
     {
         public void ShowMessageError(string message, double time)
         {
-            // using Toast.IOS
             // More configurations
             Toast.MakeToast(message)
                  .SetPosition(ToastPosition.Bottom) // Default is Bottom
