@@ -1,8 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using BaseApp.XamPrism.DependencyServices.DisplayMessageService.Interfaces;
 using BaseApp.XamPrism.Droid.DependencyServices;
-using BaseApp.XamPrism.Helpers.DisplayMessage.Interfaces;
 using Plugin.CurrentActivity;
 using Prism;
 using Prism.Ioc;

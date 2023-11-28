@@ -1,4 +1,4 @@
-﻿using BaseApp.XamPrism.Helpers.DisplayMessage.Interfaces;
+﻿using BaseApp.XamPrism.DependencyServices.DisplayMessageService.Interfaces;
 using BaseApp.XamPrism.iOS.DependencyServices;
 using GlobalToast;
 using GlobalToast.Animation;

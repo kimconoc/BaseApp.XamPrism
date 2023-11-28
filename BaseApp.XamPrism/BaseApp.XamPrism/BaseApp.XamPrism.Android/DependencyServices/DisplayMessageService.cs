@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
+using BaseApp.XamPrism.DependencyServices.DisplayMessageService.Interfaces;
 using BaseApp.XamPrism.Droid.DependencyServices;
-using BaseApp.XamPrism.Helpers.DisplayMessage.Interfaces;
 using Com.JeevanDeshmukh.GlideToastLib;
 using Plugin.CurrentActivity;
 using Xamarin.Forms;

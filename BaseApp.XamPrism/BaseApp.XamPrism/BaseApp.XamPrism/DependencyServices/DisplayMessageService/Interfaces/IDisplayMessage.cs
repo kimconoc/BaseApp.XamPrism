@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BaseApp.XamPrism.Helpers.DisplayMessage.Interfaces
+namespace BaseApp.XamPrism.DependencyServices.DisplayMessageService.Interfaces
 {
     public interface IDisplayMessage
     {
