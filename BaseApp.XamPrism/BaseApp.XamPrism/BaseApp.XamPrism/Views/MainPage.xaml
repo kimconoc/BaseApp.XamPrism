@@ -1,11 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BaseApp.XamPrism.Views.MainPage"
-             Title="{Binding Title}">
+             x:Class="BaseApp.XamPrism.Views.MainPage">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+    <StackLayout>
+        <!-- Header -->
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="StartAndExpand"
+                     HorizontalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="StartAndExpand"
+                         VerticalOptions="CenterAndExpand">
+                <Label Text="Hạn sử dụng:"
+                       FontAttributes="Bold" />
+                <Label Text="20/10/1997"
+                       FontAttributes="Bold" />
+                <Label Text="Tài khoản:"
+                       FontAttributes="Bold" />
+                <Label Text="Phạm Văn Đức"
+                       FontAttributes="Bold" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="EndAndExpand"
+                         VerticalOptions="CenterAndExpand">
+                <Image Source="user_avatar.png"
+                       WidthRequest="50"
+                       HeightRequest="50" />
+            </StackLayout>
+        </StackLayout>
+
+        <!-- Menu Items -->
+        <StackLayout>
+            <!-- Admin Menu -->
+            <!-- Other Menu Items -->
+            <Button Text="Kết Quả Xổ Số"
+                    Command="{Binding NavigateToXoSoPageCommand}" />
+            <BoxView HeightRequest="1"
+                     BackgroundColor="Gray" />
+
+            <Button Text="Danh Bạ"
+                    Command="{Binding NavigateToDanhBaPageCommand}" />
+            <BoxView HeightRequest="1"
+                     BackgroundColor="Gray" />
+            <!-- ... Other Menu Items ... -->
+
+            <!-- Logout Button -->
+            <Button Text="Đăng Xuất"
+                    Command="{Binding LogoutCommand}" />
+            <BoxView HeightRequest="1"
+                     BackgroundColor="Gray" />
+        </StackLayout>
     </StackLayout>
+
 
 </ContentPage>

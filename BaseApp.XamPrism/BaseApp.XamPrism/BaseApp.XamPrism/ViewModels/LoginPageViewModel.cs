@@ -29,7 +29,10 @@ namespace BaseApp.XamPrism.ViewModels
             {
                 using (new UsageHUDService(CommonResource.Common_Message_Processing))
                 {
-                    DisplayMessage.ShowToast("Xin chào!");
+                    await Task.Delay(1000);
+                    await NavigationService.NavigateAsync("/NavigationPage/MainPage");
+                    //await NavigationService.NavigateAsync("/MainPage");
+                    //await NavigationService.NavigateAsync("MainPage");
                     return;
                 }
             });

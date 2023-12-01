@@ -35,6 +35,7 @@ namespace BaseApp.XamPrism
             containerRegistry.RegisterForNavigation<NavigationPage>();
 
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>("LoginPage");
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>("MainPage");
 
             //Đăng ký interface triển khai DI 
             containerRegistry.Register<IProvider, Provider>();

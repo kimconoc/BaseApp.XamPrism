@@ -13,7 +13,7 @@ namespace BaseApp.XamPrism.ViewModels
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            Title = "Main Page";
+            
         }
     }
 }
